@@ -12,17 +12,19 @@ main{
         align-items: center;
         width: 100%;  
         font-size: 20px;     
+        text-align: justify;
     }
     .img-baden{
         width: 300px;
         height: 400px;
     }
     .box-section{
-        padding: 40px 50px 40px 50px;
+        padding: 40px 40px 40px 50px;
         display: flex;
         flex-direction: column;
         width: 100%;
         font-size: 20px;
+        text-align: justify;
     }
     /* Css de la section branche */
         .box-branches{
@@ -43,4 +45,25 @@ main{
             border: 2px solid var(--scout);
             background-color: var(--white);
         }
+    .insigne-eclaireur{
+        width: 200px;
+        height: 200px;
+    }
+    .insignes-route{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    main{
+        h1{
+            font-size: 25px;
+        }
+        h2{
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+    }
 }
