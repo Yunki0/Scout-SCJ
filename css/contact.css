@@ -1,0 +1,18 @@
+:root{
+    --scout: rgb(158, 68, 243);
+    --hoverfooter: rgba(0, 0, 255, 0.473);
+    --alice : aliceblue;
+    --white: #fff;
+}
+main{
+    .title{
+        text-align: center;
+        background-color: var(--scout);
+        color: var(--alice);
+        box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.212);
+    }
+    .corps{
+        margin: 4%;
+        font-size: 20px;
+    }
+}
