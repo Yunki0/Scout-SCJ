@@ -1,9 +1,17 @@
+@import url(styles.css);
+
 main{
     .title{
         text-align: center;
         background-color: var(--scout);
         color: var(--alice);
-        box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.212);;
+        box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.300);;
+        height: 65px;
+    }
+    .title:first-child{
+        position: relative;
+        top: -6px;
+        height: 60px;
     }
     #historique{  
         padding: 40px 50px 40px 50px;
@@ -26,6 +34,15 @@ main{
         font-size: 20px;
         text-align: justify;
     }
+    .pape{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 50px auto 50px auto;
+    }
+    .img-pie{
+        margin: 100px auto auto auto;
+    }
     /* Css de la section branche */
         .box-branches{
             margin: 20px 0 20px 0;
@@ -39,6 +56,9 @@ main{
         border: 2px solid var(--white);
         border-radius: 10px;
         transition: .3s;
+    }
+    .center-btn{
+        text-align: center;
     }
         .btn:hover{
             color: var(--scout);

@@ -18,10 +18,13 @@
 header{
     position: sticky;
     top: 0;
+    left: 0;
     background-color: var(--white);
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 100px;
+    border-bottom: 3px solid var(--scout);
+    border-radius: 10px;
     .navbar{
         list-style-type: none;
         display: flex;
@@ -32,6 +35,7 @@ header{
         font-size: 20px;
     }
     .img-fleur{
+        margin-top: -20px;
         width: 80px;
         height: 80px;
     }
@@ -47,6 +51,25 @@ header{
             color: var(--scout);
             text-decoration: underline 3px var(--scout);
         }
+        /* Loader Page */
+        .loader-overlay {
+            position: fixed; /* Position fixe pour couvrir toute la page */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--white); /* Couleur de fond semi-transparente */
+            z-index: 999; /* S'assure que l'overlay est au-dessus de tout le contenu */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .loader {
+            /* Style pour votre animation de chargement */
+            font-size: 24px;
+            color: #333; /* Couleur du texte de chargement */
+        }
 }
 
 footer{
@@ -58,15 +81,18 @@ footer{
     }
     .leftbox{
         width: 50%;
-        color: var(--alice);
         text-align: center;
-        background-color: var(--scout);
+        background-color: var(--white);
         padding: 20px;
         border-radius: 0 20px 20px 0;
         box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.164);
+        border: 3px solid var(--scout);
     }
+        .leftbox h2{
+            color: var(--scout);
+        }
         .leftbox a{
-            color: var(--alice);
+            color: var(--scout);
             transition: .3s;
         }
         .leftbox a:hover{
@@ -137,16 +163,11 @@ footer{
         z-index: 1000;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         height: 80px;
-        .navbar:not(:last-child){
+        .navbar{
             margin: 15px;
         }
         .navbar li{
             font-size: 17px;
-        }
-        .navbar img:first-of-type{
-            position: relative;
-            top: 0;
-            right: 50px;
         }
         .img-fleur{
             width: 70px;

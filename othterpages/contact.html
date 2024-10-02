@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/spin.css">
     <link rel="icon" href="../Images/scout(1).png">
+
+    <!-- Scripts JS -->
+     <script src="../js/scripts.js"></script>
+
     <title>Contact</title>
 </head>
 <body>  
     <header>
-        <nav>
+        <div class="loader-overlay" id="loader">
+            <div id="shadow"></div>
+            <div id="box"></div>
+    </div>
+        <nav class="nav-bar">
             <ul class="navbar">
                 <li><a href="../index.html">Accueil</a></li>
-                <!-- <li><a href="aboutus.html">À propos de nous</a></li> -->
                 <li><a href="#" class="active">Contact</a></li>
-                <a href="../index.html"><img class="img-fleur" src="../Images/Fleur de lys.png" alt="fleur de lys"></a>
-                <img class="img-fleur scj" src="../Images/SCJ.png" alt="">
+                <li><a href="../index.html"><img class="img-fleur lys-flower" src="../Images/Fleur de lys.png" alt="fleur de lys"></a></li>
+                <li><img class="img-fleur scj" src="../Images/SCJ.png" alt="SCJ"></li>
             </ul>
         </nav>
         <section>
@@ -66,11 +74,12 @@
     </main>
     <footer>
         <section class="leftbox">
-            <h2>Autres Liens</h2>
             <ul>
+                <h2>Autres Liens</h2>
                 <li><a href="https://www.scout.org/" target="_blank">Scout Mondial</a></li>
                 <li><a href="https://adhesion.scoutascci.org/" target="_blank">Adhesion Scout</a></li>
                 <li><a href="https://web.facebook.com/scoutascci" target="_blank">Facebook Scout de Côte D'Ivoire</a></li>
+                <li><a href="https://web.facebook.com/districtAB" target="_blank">Facebook Scout Bingerville</a></li>
             </ul>
         </section>
         <section class="rightbox">

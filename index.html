@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/spin.css">
     <link rel="icon" href="Images/scout(1).png">
 
     <!-- Scripts -->
@@ -14,15 +15,16 @@
 </head>
 <body>
     <header>
+        <div class="loader-overlay" id="loader">
+                <div id="shadow"></div>
+                <div id="box"></div>
+        </div>
         <nav class="nav-bar">
             <ul class="navbar">
                 <li><a href="#" class="active">Accueil</a></li>
-                <!-- <li><a href="othterpages/aboutus.html">À propos de nous</a></li> -->
                 <li><a href="othterpages/contact.html">Contact</a></li>
-                <a href="#"><img class="img-fleur" src="Images/Fleur de lys.png" alt="fleur de lys"></a>
-                <img class="img-fleur scj" src="Images/SCJ.png" alt="">
-                <!-- <img class="hamburger" src="Images/menu.png" alt=""> -->
-                </div>
+                <li><a href="#"><img class="img-fleur" src="Images/Fleur de lys.png" alt="fleur de lys"></a></li>
+                <li><img class="img-fleur scj" src="Images/SCJ.png" alt=""></li>
             </ul>
         </nav>
         <section>
@@ -30,7 +32,7 @@
         </section>
     </header>
     <main>
-        <div class="title"><h1>Le Scoutisme</h1></div>
+        <div class="title first-title"><h1>Le Scoutisme</h1></div>
         <section id="historique">
             <h2>
                 <ul>
@@ -42,7 +44,7 @@
                 siège de <strong>Mafeking</strong>, où il forme des jeunes garçons pour des tâche de défense comme la transmission des messages. Cette expérience lui révèle le potentiel des jeunes lorsqu'ils sont responsabilisés. <br>
                 <br>
             </p>
-            <img class="img-baden" src="Images/gettyimages-888907936-612x612.jpg" alt=""><br>
+            <img class="img-baden" src="Images/gettyimages-888907936-612x612.jpg" alt="">Baden-Powell<br>
             <p>
                 <br>
                 En 1907, il organise un camp expérimental sur l'île de Brownsea avec 20 garçons issus de milieux différents, pour tester ses idées éducatives centrées sur l'apprentissage en plein air et la 
@@ -54,10 +56,41 @@
             </p>
         </section>
         <div class="title">
+            <h1>Le Scoutisme dans l'Église Catholique</h1>
+        </div>
+        <section id="historique-catholique" class="box-section">
+            <h2>
+                <ul>
+                    <li>
+                        Historique du Scoutisme dans L'Église Catholique
+                    </li>
+                </ul>
+            </h2>
+            <p>
+                En 1922, le pape Benoît XV a publiquement soutenu le scoutisme, ouvrant la voie à une intégration plus large du mouvement au sein des paroisses et des institutions catholiques. 
+                Ce soutien a permis de créer des associations scoutes catholiques, comme les Scouts de France, qui ont adapté les principes du scoutisme aux valeurs de la foi chrétienne.
+            </p>
+            <br>
+            <p>
+                L'approbation du scoutisme par l'Église catholique a été renforcée par le pape Pie XI en 1924, qui a encouragé le développement du scoutisme dans les diocèses et a demandé aux évêques de soutenir ce mouvement éducatif. 
+                Plus tard, en 1944, le pape Pie XII a également souligné le rôle éducatif et spirituel du scoutisme, en affirmant que celui-ci était compatible avec la foi catholique.
+            </p>
+            <br>
+            <div class="pape">
+                <img class="img-baden img-benoit" src="Images/Benedictus_XV,_by_Nicola_Perscheid,_1915_(retouched).jpg" alt="Image Pape Benoît">
+                <p>Pape Benoît XV</p>
+                <img class="img-baden img-pie" src="Images/Pius_XII_with_tabard,_by_Michael_Pitcairn,_1951_(retouched).jpg" alt="Image Pape Pie XII">
+                <p>Pape Pie XII</p>
+            </div>
+            <p>Aujourd'hui, le scoutisme catholique intègre la spiritualité et l'engagement dans la vie religieuse dans ses activités, en accordant une place importante à la prière, à la messe et à l'apprentissage des valeurs chrétiennes. 
+                Ces éléments font du scoutisme un cadre propice pour l'éducation des jeunes, en les préparant à devenir des citoyens engagés et des leaders responsables au sein de leur communauté.
+            </p>
+        </section>
+        <div class="title">
             <h1>Le Scoutisme sur notre Chapelle</h1>
         </div> 
         <section id="responsable" class="box-section">
-            <ul><li><h2>Historique des scouts de SACRÉ-COEUR</h2></li></ul>
+            <ul><li><h2>Historique des scouts de SACRÉ-COEUR D'Akandjé Bingerville</h2></li></ul>
             Le scoutisme a été lancé en juillet 2023 au sein de notre chapelle par une équipe de jeunes chefs et d’adultes engagés. Leur objectif est de faire vivre aux enfants des activités en plein air, tout en leur inculquant les valeurs fondamentales du scoutisme pour les préparer à être des citoyens responsables et utiles en société. <br>
             Afin d’adapter l’apprentissage aux différents âges, plusieurs branches ont été mises en place :
             <ul>
@@ -117,7 +150,7 @@
                     <li>Il se caractérise avec la couleur Rouge dans le fond de leur foulard</li>
                     <li>DEVISE : Routiers pour, Servir</li>
                     <br>
-                    <!-- <div><a class="btn" href="othterpages/routiers.html">En Savoir +</a></div> -->
+                    <div class="center-btn"><a class="btn" href="othterpages/routiers.html">Voir nos Photos</a></div>
                 </ul>
             </aside>
         </section>
@@ -138,11 +171,12 @@
     </main>
     <footer>
         <section class="leftbox">
-            <h2>Autres Liens</h2>
             <ul>
+                <h2>Autres Liens</h2>
                 <li><a href="https://www.scout.org/" target="_blank">Scout Mondial</a></li>
                 <li><a href="https://adhesion.scoutascci.org/" target="_blank">Adhesion Scout</a></li>
                 <li><a href="https://web.facebook.com/scoutascci" target="_blank">Facebook Scout de Côte D'Ivoire</a></li>
+                <li><a href="https://web.facebook.com/districtAB" target="_blank">Facebook Scout Bingerville</a></li>
             </ul>
         </section>
         <section class="rightbox">
