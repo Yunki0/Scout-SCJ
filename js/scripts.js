@@ -5,6 +5,6 @@ window.onload = function() {
     // Ajoute un délai de 2 secondes avant de masquer l'overlay de chargement
      setTimeout(function() {
          loader.style.display = 'none';
-     }, 1000); // 2000 millisecondes = 2 secondes
+     }, 500); // 2000 millisecondes = 2 secondes
 };
 
