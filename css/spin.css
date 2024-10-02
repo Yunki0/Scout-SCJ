@@ -4,44 +4,92 @@
     --size: 70px;
 }
 #loader{
-background: var(--white);
-overflow: hidden;
-display: flex;
-justify-self: center;
-align-items: center;
+    background: var(--white);
+    overflow: hidden;
+    display: flex;
+    justify-self: center;
+    align-items: center;
 }
 #box{
-width: var(--size);
-height: var(--size);
-background: var(--scout);
-border-radius: 5px;
-animation: spin .5s linear infinite;
+    width: var(--size);
+    height: var(--size);
+    background: var(--scout);
+    border-radius: 5px;
+    animation: spin .5s linear infinite;
 }
 @keyframes spin {
-17% {border-bottom-right-radius: 3px;}
-25% {transform: translateY(9px)
-        rotate(22.5deg);}
-50% {
-    transform: translateY(18px)
-    scale(1,.9) rotate(45deg);
-    border-bottom-right-radius: 50px;
-}
-75% {transform: translateY(9px)
-    rotate(67.5deg);}
-100% {transform:translateY(0)
-        rotate(90deg);}
+    17% {border-bottom-right-radius: 3px;}
+    25% {transform: translateY(9px)
+            rotate(22.5deg);}
+    50% {
+        transform: translateY(18px)
+        scale(1,.9) rotate(45deg);
+        border-bottom-right-radius: 50px;
+    }
+    75% {transform: translateY(9px)
+        rotate(67.5deg);}
+    100% {transform:translateY(0)
+            rotate(90deg);}
 }
 #shadow{
-position: relative;
-top: 50px;
-left: 70px;
-width: var(--size);
-height: 5px;
-background: var(--scout);
-opacity: 0.5;
-border-radius: 50%;
-animation: shadow .5s linear infinite;    
+    position: relative;
+    top: 50px;
+    left: 70px;
+    width: var(--size);
+    height: 5px;
+    background: var(--scout);
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: shadow .5s linear infinite;    
 }
 @keyframes shadow {
-50% {transform: scale(1.2,1);}
+    50% {transform: scale(1.2,1);}
+}
+
+@media screen and (max-width: 480px){
+    :root{
+        --size: 50px;
+    }
+    #loader{
+        background: var(--white);
+        overflow: hidden;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+    #box{
+        width: var(--size);
+        height: var(--size);
+        background: var(--scout);
+        border-radius: 5px;
+        animation: spin .5s linear infinite;
+    }
+    @keyframes spin {
+        17% {border-bottom-right-radius: 3px;}
+        25% {transform: translateY(9px)
+                rotate(22.5deg);}
+        50% {
+            transform: translateY(18px)
+            scale(1,.9) rotate(45deg);
+            border-bottom-right-radius: 50px;
+        }
+        75% {transform: translateY(9px)
+            rotate(67.5deg);}
+        100% {transform:translateY(0)
+                rotate(90deg);}
+    }
+    #shadow{
+        position: relative;
+        top: 35px;
+        left: 50px;
+        width: var(--size);
+        height: 5px;
+        background: var(--scout);
+        opacity: 0.5;
+        border-radius: 50%;
+        animation: shadow .5s linear infinite;    
+    }
+    @keyframes shadow {
+        50% {transform: scale(1.2,1);}
+    }
 }
