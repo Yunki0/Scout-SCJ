@@ -12,6 +12,7 @@
     --hoverfooter: rgba(0, 0, 255, 0.473);
     --alice : aliceblue;
     --white: #fff;
+    --size: 70px;
     --hamburger: #000;
 }
 
@@ -63,12 +64,11 @@ header{
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
-        
-        .loader {
-            /* Style pour votre animation de chargement */
-            font-size: 24px;
-            color: #333; /* Couleur du texte de chargement */
+        .loader-overlay h2{
+            margin-top: 40px;
+            color: #333;
         }
 }
 

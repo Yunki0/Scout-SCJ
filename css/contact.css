@@ -1,9 +1,5 @@
-:root{
-    --scout: rgb(158, 68, 243);
-    --hoverfooter: rgba(0, 0, 255, 0.473);
-    --alice : aliceblue;
-    --white: #fff;
-}
+@import url(styles.css);
+
 main{
     .title{
         text-align: center;

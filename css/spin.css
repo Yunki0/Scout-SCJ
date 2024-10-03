@@ -1,8 +1,5 @@
 @import url(styles.css);
 
-:root{
-    --size: 70px;
-}
 #loader{
     background: var(--white);
     overflow: hidden;
@@ -33,8 +30,8 @@
 }
 #shadow{
     position: relative;
-    top: 50px;
-    left: 70px;
+    top: 90px;
+    left: 0px;
     width: var(--size);
     height: 5px;
     background: var(--scout);
@@ -45,17 +42,15 @@
 @keyframes shadow {
     50% {transform: scale(1.2,1);}
 }
-
+.no-scroll{
+    overflow: hidden;
+}
 @media screen and (max-width: 480px){
     :root{
         --size: 50px;
     }
     #loader{
         background: var(--white);
-        overflow: hidden;
-        display: flex;
-        align-content: center;
-        align-items: center;
     }
     #box{
         width: var(--size);
@@ -80,8 +75,8 @@
     }
     #shadow{
         position: relative;
-        top: 35px;
-        left: 50px;
+        top: 67px;
+        left: 0px;
         width: var(--size);
         height: 5px;
         background: var(--scout);
