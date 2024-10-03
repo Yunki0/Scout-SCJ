@@ -47,3 +47,6 @@ closeZoom.addEventListener('click', closeZoomImage);
 
 // Fermer l'image zoomée en cliquant sur l'image elle-même
 zoomedImage.addEventListener('click', closeZoomImage);
+
+// Fermer L'image zoomée en cliquant dans l'arrière plan noir
+zoomOverlay.addEventListener('click', closeZoomImage);
