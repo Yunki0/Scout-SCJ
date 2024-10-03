@@ -32,21 +32,23 @@
     </header>
     <main>
         <div class="gallery">
-            <img class="together zoomable" src="../Images/scouts-moments/Louveteaux/419737028_807866588055710_7597907356119417670_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Louveteaux/419737761_807867944722241_6527614312647542659_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Louveteaux/419743015_807867958055573_6167322789315917813_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Louveteaux/420194117_807866728055696_294786130343646903_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Louveteaux/420197901_807867884722247_9069128478979880026_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Louveteaux/420367811_807866701389032_3101379845941482155_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Louveteaux/424914941_807867828055586_67780852469177770_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Louveteaux/434934505_808377851337917_2566158238760445699_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Eclaireurs/434933369_808377878004581_8040652290834674510_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Eclaireurs/434961204_808377898004579_54040612892696408_n.jpg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Cheminots/WhatsApp Image 2024-10-02 at 1.26.46 PM (1).jpeg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Cheminots/WhatsApp Image 2024-10-02 at 1.26.46 PM (2).jpeg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Cheminots/WhatsApp Image 2024-10-02 at 1.26.46 PM (3).jpeg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Cheminots/WhatsApp Image 2024-10-02 at 1.26.46 PM (4).jpeg" alt="">
-            <img class="together zoomable" src="../Images/scouts-moments/Cheminots/WhatsApp Image 2024-10-02 at 1.26.46 PM.jpeg" alt="">    
+            <?php
+            // Indique le dossier où se trouvent tes images
+            $imagesDirectory = "../Images/scouts-moments/";
+
+            // Vérifie si le dossier existe
+            if (is_dir($imagesDirectory)) {
+                // Parcours tous les fichiers du dossier avec des extensions d'image
+                $images = glob($imagesDirectory . "*.{jpg,jpeg,png,gif}", GLOB_BRACE);
+                
+                // Pour chaque image trouvée, crée une balise <img> et l'affiche
+                foreach ($images as $image) {
+                    echo '<img class="together zoomable" src="'.$image.'" alt="Image" style="width:200px; height:auto;">';
+                }
+            } else {
+                echo "Le dossier d'images n'existe pas.";
+            }
+            ?>
             <!-- Ajoute d'autres images ici -->
         </div>  
         <div id="zoomOverlay" class="zoom-overlay">
