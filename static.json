@@ -1,0 +1,15 @@
+{
+    "redirects": [
+      { "source": "http://scout-scj.onrender.com", "destination": "https://scout-scj.onrender.com", "permanent": true }
+    ],
+    
+    "headers": {
+      "/static/*": {
+        "Cache-Control": "public, max-age=31536000"
+      }
+    }
+}
+  
+  
+
+    
