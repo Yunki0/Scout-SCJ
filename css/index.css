@@ -73,6 +73,46 @@ main{
         width: 250px;
         height: 250px;
     }
+    .btnbranch{
+        color: var(--alice);
+        padding: 10px;
+        border: 2px solid var(--white);
+        border-radius: 10px;
+        transition: .3s;
+    }
+    .btnloup{
+        background-color: var(--loup);
+    }
+        .btnloup:hover{
+            color: var(--loup);
+            border: 2px solid var(--loup);
+            background-color: var(--white);
+        }
+    .btntroupe{
+        background-color: var(--troupe);
+    }
+        .btntroupe:hover{
+            color: var(--troupe);
+            border: 2px solid var(--troupe);
+            background-color: var(--white);
+        }
+    .btnchemin{
+        background-color: var(--chemin);
+    }
+        .btnchemin:hover{
+            color: var(--chemin);
+            border: 2px solid var(--chemin);
+            background-color: var(--white);
+        }
+    .btnroute{
+        background-color: var(--route);
+    }
+        .btnroute:hover{
+            color: var(--route);
+            border: 2px solid var(--route);
+            background-color: var(--white);
+        }
+
 }
 
 @media screen and (max-width: 488px){

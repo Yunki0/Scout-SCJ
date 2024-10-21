@@ -43,6 +43,27 @@
     font-size: 40px;
     cursor: pointer;
 }
+.btn-pages{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.switch{
+    padding: 20px;
+}
+.btnprec{
+    background-color: var(--white);
+    color: var(--scout);
+    padding: 10px;
+    border: 2px solid var(--scout);
+    border-radius: 10px;
+    transition: .3s;
+}
+    .btnprec:hover{
+        color: var(--alice);
+        border: 2px solid var(--white);
+        background-color: var(--scout);
+    }
 @media screen and (max-width: 600px) {
 
     .gallery img{
