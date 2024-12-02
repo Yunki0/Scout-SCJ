@@ -1,0 +1,49 @@
+@import url(styles.css);
+
+main{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    flex-flow: row wrap;
+    height: 55vh;
+}
+main a{
+    background-color: var(--scout);
+    color: var(--alice);
+    margin: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid var(--white);
+    transition: background-color 0.2s ease-in-out;
+}
+main a:hover{
+    background-color: var(--white);
+    color: var(--scout);
+    border: 1px solid var(--scout);
+}
+
+.content{
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px auto;
+}
+.avocat{
+    display: flex;
+    flex-direction: column;
+}
+.morse{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    main{
+        height: 100%;
+    }
+}
