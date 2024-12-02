@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/morse-avocat.css">
+    <link rel="stylesheet" href="../css/spin.css">
+    <link rel="icon" href="../Images/scout(1).png">
+
+    <!-- Scripts JS -->
+     <script src="../js/scripts.js"></script>
+
+    <title>Scouts-SCJ | Morse</title>
+</head>
+<body>  
+    <header>
+        <div class="loader-overlay" id="loader">
+            <div class="together">
+                <div id="shadow"></div>
+                <div id="box"></div>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <ul class="navbar">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="#" class="active">Codage</a></li>
+                <li><a href="../index.html"><img class="img-fleur lys-flower" src="../Images/Fleur de lys.png" alt="fleur de lys"></a></li>
+                <li><img class="img-fleur scj" src="../Images/SCJ.png" alt="SCJ"></li>
+            </ul>
+        </nav>
+        <section>
+            <!-- <span><img src="" alt="banderole"></span> -->
+        </section>
+    </header>
+    <main>
+        <h1>Convertisseur Morse</h1>
+        <form id="morseForm">
+            <input type="text" id="inputText" placeholder="Entrez du texte ou code Morse" required>
+            <button type="button" id="convertToMorse">Convertir en Morse</button>
+            <button type="button" id="convertToText">Convertir en Texte</button>
+            <input type="text" id="outputText" placeholder="Résultat" readonly>
+        </form>
+        <div class="link">
+            <a href="codage-avocat.html">A vaut K</a>
+        </div>
+    </main>
+    <footer>
+        <section class="leftbox">
+            <ul>
+                <h2>Autres Liens</h2>
+                <li><a href="https://www.scout.org/" target="_blank">Scout Mondial</a></li>
+                <li><a href="https://adhesion.scoutascci.org/" target="_blank">Adhesion Scout</a></li>
+                <li><a href="https://web.facebook.com/scoutascci" target="_blank">Facebook Scout de Côte D'Ivoire</a></li>
+                <li><a href="https://web.facebook.com/districtAB" target="_blank">Facebook Scout Bingerville</a></li>
+            </ul>
+        </section>
+        <section class="rightbox">
+            <span><img src="../Images/OMMS.png" alt="OMMS"></span>
+            <span><img class="img-ascci" src="../Images/240px-Scouts_de_côte_d'Ivoire.png" alt="ASCCI"></span>
+            <span><img class="img-logo" src="../Images/Logo DA.png" alt=""></span>
+            <span><img class="img-logo" src="../Images/Logo ABC.png" alt="Abidjan Bingerville centre"></span>
+        </section>
+    </footer>
+    <script>
+        const morseAlphabet = {
+            'A': '·−', 'B': '−···', 'C': '−·−·', 'D': '−··', 'E': '·', 'F': '··−·',
+            'G': '−−·', 'H': '····', 'I': '··', 'J': '·−−−', 'K': '−·−', 'L': '·−··',
+            'M': '−−', 'N': '−·', 'O': '−−−', 'P': '·−−·', 'Q': '−−·−', 'R': '·−·',
+            'S': '···', 'T': '−', 'U': '··−', 'V': '···−', 'W': '·−−', 'X': '−··−',
+            'Y': '−·−−', 'Z': '−−··', '1': '·−−−−', '2': '··−−−', '3': '···−−', '4': '····−',
+            '5': '·····', '6': '−····', '7': '−−···', '8': '−−−··', '9': '−−−−·', '0': '−−−−−'
+        };
+        
+        function toMorse(text) {
+            return text.toUpperCase().split('').map(char => {
+                if (char === ' ') return '/';  // Espace pour séparation entre les mots
+                return morseAlphabet[char] || '';  // Si le caractère n'est pas dans l'alphabet, on ignore
+            }).join(' ');
+        }
+        
+        function toText(morse) {
+            const reverseMorse = Object.fromEntries(Object.entries(morseAlphabet).map(([k, v]) => [v, k]));
+            return morse.split(' ').map(symbol => {
+                if (symbol === '/') return ' ';  // Séparateur pour les mots
+                return reverseMorse[symbol] || '';  // Si le symbole n'est pas valide, on ignore
+            }).join('');
+        }
+        
+        document.getElementById("convertToMorse").addEventListener("click", function() {
+            const inputText = document.getElementById("inputText").value;
+            const morseCode = toMorse(inputText);
+            document.getElementById("outputText").value = morseCode;
+        });
+        
+        document.getElementById("convertToText").addEventListener("click", function() {
+            const morseCode = document.getElementById("inputText").value;
+            const decodedText = toText(morseCode);
+            document.getElementById("outputText").value = decodedText;
+        });
+    </script>
+</body>
+</html>
