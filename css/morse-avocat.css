@@ -1,0 +1,57 @@
+@import url(styles.css);
+
+main{
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    height: 55vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px auto;
+}
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 10px;
+    outline: none;
+    border-bottom: 1px solid var(--scout);
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: var(--scout);
+    color: var(--alice);
+    transition: .3s;
+    border: 1px solid var(--white);
+}
+button:hover{
+    background-color: var(--white);
+    color: var(--scout);
+    border: 1px solid var(--scout);
+}
+
+@media screen and (max-width: 400px) {
+    form{
+        width: 300px;
+        height: 300px;
+    }
+    main{
+        height: 100%;
+        text-align: center;
+    }
+}
