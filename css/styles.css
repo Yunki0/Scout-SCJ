@@ -76,6 +76,7 @@ header{
         }
 }
 
+
 footer{
     display: flex;
     font-size: 20px;
@@ -120,6 +121,11 @@ footer{
             width: 110px;
             height: 110px;
         }
+}
+@media screen and (max-width: 390px) {
+    .img-fleur{
+        display: none;
+    }
 }
 @media screen and (max-width: 480px){
     header{
@@ -167,7 +173,7 @@ footer{
         z-index: 1000;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         height: 80px;
-        .navbar{
+        .navbar{    
             margin: 15px;
         }
         .navbar li{
@@ -179,6 +185,7 @@ footer{
         } 
         .scj{display: none;}
     }
+ 
     footer{
         display: flex;
         flex-direction: column;
