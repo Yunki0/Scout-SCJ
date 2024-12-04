@@ -1,0 +1,60 @@
+@import url(styles.css);
+
+.banderole {
+    position: fixed; /* Rendre la banderole fixe */
+    top: 0; /* Positionner en haut de la page */
+    left: 0; /* Positionner à gauche de la page */
+    width: 100%; /* Prendre toute la largeur */
+    height: auto; /* Hauteur automatique */
+    z-index: -1; /* Placer derrière le texte */
+}
+
+.banderole-text {
+    position: absolute; /* Positionner le texte de manière absolue */
+    top: 50%; /* Positionner verticalement au centre */
+    left: 50%; /* Positionner horizontalement au centre */
+    transform: translate(-50%, -50%); /* Centrer le texte */
+    color: var(--white); /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    z-index: 1; /* Placer le texte au-dessus de la banderole */
+    font-size: 100px;
+}
+
+@keyframes zoomEtVaEtVient {
+    0% {
+        transform: translateX(0) scale(1); /* Position initiale et échelle normale */
+    }
+    50% {
+        transform: translateX(10px) scale(1.1); /* Déplacement vers la droite et zoom */
+    }
+    100% {
+        transform: translateX(0) scale(1); /* Retour à la position initiale et échelle normale */
+    }
+}
+
+.banderole img {
+    width: 100%; /* L'image prend toute la largeur */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+    animation: zoomEtVaEtVient 3s ease-in-out infinite; /* Appliquer l'animation */
+}
+
+main {
+    position: relative; /* Positionner le main par rapport à la banderole */
+    z-index: 1; /* Placer le texte au-dessus de la banderole */
+    padding-top: 400px; /* Ajouter un padding pour éviter que le texte ne soit caché par la banderole */
+}
+
+.contexte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 90px;
+}
+.contexte, footer{
+    background-color: var(--white);
+}
+
+h3, h2, p{
+    line-height: 3;
+}
+
