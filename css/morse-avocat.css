@@ -6,14 +6,28 @@ main{
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    height: 55vh;
+    height: 65vh;
+}
+.link{
+    font-size: 17px;
+    color: var(--white);
+    background: var(--scout);
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--white);
+    transition: .3s;
+}
+.link:hover{
+    background: var(--white);
+    color: var(--scout);
+    border: 1px solid var(--scout);
 }
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 400px;
-    height: 400px;
+    height: 300px;
     border: 1px solid white;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
