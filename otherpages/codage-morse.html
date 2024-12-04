@@ -74,18 +74,23 @@
         };
         
         function toMorse(text) {
-            return text.toUpperCase().split('').map(char => {
-                if (char === ' ') return '/';  // Espace pour séparation entre les mots
-                return morseAlphabet[char] || '';  // Si le caractère n'est pas dans l'alphabet, on ignore
-            }).join(' ');
+            return text.trim().toUpperCase().split(/(\.|\s)/).map(segment => {
+                if (segment === '.') return '//'; // Fin de phrase
+                if (segment.trim() === '') return ''; // Ignore les espaces
+                // Convertit chaque lettre en Morse avec un slash entre les lettres
+                return segment.split('').map(char => morseAlphabet[char] || '').filter(Boolean).join('/');
+            }).filter(Boolean).join('/') // Ajoute des slashes entre les segments
+            .replace(/\/{2,}/g, '/'); // Réduit tout groupe de slashes multiples à un seul
         }
         
         function toText(morse) {
             const reverseMorse = Object.fromEntries(Object.entries(morseAlphabet).map(([k, v]) => [v, k]));
-            return morse.split(' ').map(symbol => {
-                if (symbol === '/') return ' ';  // Séparateur pour les mots
-                return reverseMorse[symbol] || '';  // Si le symbole n'est pas valide, on ignore
-            }).join('');
+            return morse.split('//').map(sentence => { // Sépare par phrases
+                return sentence.split('/').map(symbol => {
+                    if (!symbol.trim()) return ''; // Ignore les symboles vides
+                    return reverseMorse[symbol] || ''; // Récupère la lettre correspondante
+                }).join('');
+            }).join('. '); // Rejoint les phrases avec un point et un espace
         }
         
         document.getElementById("convertToMorse").addEventListener("click", function() {
@@ -98,7 +103,7 @@
             const morseCode = document.getElementById("inputText").value;
             const decodedText = toText(morseCode);
             document.getElementById("outputText").value = decodedText;
-        });
+        });       
     </script>
 </body>
 </html>
