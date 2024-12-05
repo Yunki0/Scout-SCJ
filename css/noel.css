@@ -47,6 +47,23 @@ main {
 h3, h2, p{
     line-height: 3;
 }
+.phone{
+    list-style-type: none;
+    margin: 10px;
+}
+.phone a{
+    background-color: var(--scout); 
+    padding:10px; 
+    color: var(--white); 
+    border:1px solid var(--white); 
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+.phone a:hover{
+    background: var(--white);
+    color: var(--scout);
+    border: 1px solid var(--scout);
+}
 
 @media screen and (max-width: 1280px){
     .banderole-text{
